@@ -14,6 +14,9 @@ class SendCoinsDialog;
 class SignVerifyMessageDialog;
 class Notificator;
 class RPCConsole;
+class StatisticsPage;
+class BlockBrowser;
+class ChatWindow;
 
 QT_BEGIN_NAMESPACE
 class QLabel;
@@ -64,6 +67,9 @@ private:
     AddressBookPage *addressBookPage;
     AddressBookPage *receiveCoinsPage;
     SendCoinsDialog *sendCoinsPage;
+    StatisticsPage *statisticsPage;
+    BlockBrowser *blockBrowser;
+    ChatWindow *chatWindow;
     SignVerifyMessageDialog *signVerifyMessageDialog;
 
     QLabel *labelEncryptionIcon;
@@ -78,6 +84,9 @@ private:
     QAction *historyAction;
     QAction *quitAction;
     QAction *sendCoinsAction;
+    QAction *statisticsAction;
+    QAction *blockAction;
+    QAction *chatAction;
     QAction *addressBookAction;
     QAction *signMessageAction;
     QAction *verifyMessageAction;
@@ -145,6 +154,12 @@ private slots:
     void gotoReceiveCoinsPage();
     /** Switch to send coins page */
     void gotoSendCoinsPage();
+    /** Switch to statistics page*/
+    void gotoStatisticsPage();
+    /** Switch to block explorer*/
+    void gotoBlockBrowser();
+    /** Switch to chat page*/
+    void gotoChatPage();
 
     /** Show Sign/Verify Message dialog and switch to sign message tab */
     void gotoSignMessageTab(QString addr = "");
