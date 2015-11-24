@@ -1010,7 +1010,7 @@ int64_t GetProofOfWorkReward(int64_t nFees)
       return nSubsidy + nFees;
     }
     
-    else if (pindexBest->nHeight+1 > 250560)
+    else
     {
       nSubsidy = 0.001 * COIN;
       return nSubsidy + nFees;
@@ -2148,8 +2148,9 @@ bool CBlock::AcceptBlock()
     CBlockIndex* pindexPrev = (*mi).second;
     int nHeight = pindexPrev->nHeight+1;
 
-    if (IsProofOfWork() && nHeight > LAST_POW_BLOCK)
-        return DoS(100, error("AcceptBlock() : reject proof-of-work at height %d", nHeight));
+	// KolschCoin will now be PoW/PoS hybrid permanently
+   /* if (IsProofOfWork() && nHeight > LAST_POW_BLOCK)
+        return DoS(100, error("AcceptBlock() : reject proof-of-work at height %d", nHeight));*/
 
     if (IsProofOfStake() && nHeight < MODIFIER_INTERVAL_SWITCH)
         return DoS(100, error("AcceptBlock() : reject proof-of-stake at height %d", nHeight));
