@@ -1140,9 +1140,9 @@ void MapPort()
 // The second name should resolve to a list of seed addresses.
 static const char *strDNSSeed[][2] = {
 		{"CGN0", "185.61.151.109"},
-    	{"CGN1", "104.156.237.74"},
-    	{"CGN2", "104.219.250.54"},
-    	{"CGN3", "5.9.36.211"},
+    	{"CGN1", "149.202.160.172"},
+    	{"CGN2", "stratumtest.ddns.net"},
+    	{"CGN3", "185.61.151.132"},
     	{"CGN4", "87.103.124.28"},
         {"CGN5", "185.49.56.51"},
         {"CGN6", "79.248.10.251"},
